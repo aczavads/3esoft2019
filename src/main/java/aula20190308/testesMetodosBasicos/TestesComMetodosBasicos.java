@@ -43,8 +43,6 @@ public class TestesComMetodosBasicos {
 		Util.seiLah(fulana);
 		
 		assertEquals("Fulana", fulana.getNome());
-		
-		
 	}
 	
 	

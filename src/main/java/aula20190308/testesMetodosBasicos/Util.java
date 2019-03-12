@@ -12,7 +12,10 @@ public class Util {
 	
 	public static int contarPares(int[] inteiros) {
 		int pares = 0;
-		for (int valor : inteiros) {
+		
+		//for (int valor : inteiros) {
+		for (int contador = 0; contador < inteiros.length; contador++) {
+			int valor = inteiros[contador];
 			if (valor%2==0) {
 				pares++;
 			}
