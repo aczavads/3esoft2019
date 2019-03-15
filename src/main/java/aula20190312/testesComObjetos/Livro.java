@@ -10,18 +10,6 @@ public class Livro extends Object {
 	public Livro(String titulo, int quantidadeDePaginas) {
 		this.titulo = titulo;
 		this.quantidadeDePaginas = quantidadeDePaginas;
-		this.titulo = titulo;
-		this.quantidadeDePaginas = quantidadeDePaginas;
-
-		this.titulo = titulo;
-		this.quantidadeDePaginas = quantidadeDePaginas;
-
-		this.titulo = titulo;
-		this.quantidadeDePaginas = quantidadeDePaginas;
-
-		this.titulo = titulo;
-		this.quantidadeDePaginas = quantidadeDePaginas;
-
 	}
 	
 
