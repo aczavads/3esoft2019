@@ -1,4 +1,4 @@
-package aula20190315.pedido;
+package aula20190319.pedido;
 
 import static org.junit.Assert.*;
 
@@ -29,6 +29,14 @@ public class TestesComPedido {
 	}
 	@Test
 	public void testarValorTotalDoPedido() {
+		Pedido p1 = new Pedido(1);		
+		p1.adicionarItem(omo, 2, 10, 10.00);
+		p1.adicionarItem(soja, 2, 5, 10.00);
+		assertEquals(27.00, p1.getValorTotal(),0.01);
+		
+		Pedido p2 = new Pedido(2);
+		p2.adicionarItem(omo, 4, 20, 5.00);
+		assertEquals(76.00, p2.getValorTotal(),0.01);
 		
 	}
 
