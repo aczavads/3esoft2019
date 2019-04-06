@@ -1,6 +1,8 @@
-package aula20190402.lista;
+package aula20190405.generics;
 
 import static org.junit.Assert.*;
+
+import java.util.Date;
 
 import org.junit.Test;
 
@@ -8,8 +10,8 @@ public class TestesComLista {
 
 	@Test
 	public void testarSeNovaListaEst·Vazia() {
-		Lista nova = new Lista();
-		
+		Lista<Integer> nova = new Lista<Integer>();		
+		nova.adicionar(10);
 		assertEquals(0, nova.obterTamanho());
 	}
 	@Test

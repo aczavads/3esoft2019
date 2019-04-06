@@ -1,13 +1,13 @@
-package aula20190402.lista;
+package aula20190405.generics;
 
-public class Lista {
+public class Lista<TIPO> {
 	private Object[] dados = new Object[0];
 
 	public int obterTamanho() {
 		return dados.length;
 	}
 
-	public void adicionar(Object elemento) {
+	public void adicionar(TIPO elemento) {
 		int tamanho = dados.length;
 		
 		Object[] novoArray = new Object[tamanho+1];
@@ -19,8 +19,8 @@ public class Lista {
 		dados = novoArray;		
 	}
 
-	public Object pegar(int posição) {
-		return dados[posição];
+	public TIPO pegar(int posição) {
+		return (TIPO)dados[posição];
 	}
 
 	public void remover(int posição) {
