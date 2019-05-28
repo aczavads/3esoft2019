@@ -4,14 +4,13 @@ public class App {
 	
 	public static void main(String[] args) {
 		Pessoa wilson = new Fisica("Wilson da Silva Matos", "4.444.444-44", "444.555.445-44");
-		Pessoa claudio = new Fisica("Cláudio Ferdinandi", "2.222.222-55", "123.984.445-12");
+		Pessoa claudio = new Fisica("Clï¿½udio Ferdinandi", "2.222.222-55", "123.984.445-12");
 		Pessoa arthur = new Fisica("Arthur Cattaneo Zavadski9", "3.333.333-74", "888.333.445-24");
-		Juridica uniCesumar = new Juridica("UniCesumar Centro Universitário Cesumar Ltda.", "01.004.137/0001-55", 500_000d);
+		Juridica uniCesumar = new Juridica("UniCesumar Centro Universitï¿½rio Cesumar Ltda.", "01.004.137/0001-55", 500_000d);
 		
 		uniCesumar.adicionarSocio(wilson, 70.00d);
 		uniCesumar.adicionarSocio(claudio, 29.50d);
-		uniCesumar.adicionarSocio(arthur, 0.25d);
-		uniCesumar.adicionarSocio(arthur, 0.25d);
+		uniCesumar.adicionarSocio(arthur, 2.25d);
 		
 		
 		uniCesumar.removerSocio(arthur);

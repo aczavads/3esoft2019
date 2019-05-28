@@ -1,6 +1,8 @@
-package aula20190521.v1.pessoa;
+package aula20190528.v2.pessoa;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -19,24 +21,33 @@ public class Juridica extends Pessoa {
 		this.cnpj = cnpj;
 		this.capitalSocial = capitalSocial;
 	}
-	public void adicionarSocio(Pessoa socio, double percentualDeParticipacao) {
+	public void adicionarSocio(Pessoa socio, PercentualDeParticipacao percentualDeParticipacao) {
 		CotaSociedade novaCota = new CotaSociedade();
 		novaCota.socio = socio;
 		novaCota.percentualDeParticipacao = percentualDeParticipacao;
 		
 		double percentualAtual = somarPercentualAtual();
+		/*
 		if (percentualAtual + percentualDeParticipacao > 100.00) {
 			throw new RuntimeException("A participaço total n�o pode exceder 100%! Percentual atual: " + percentualAtual + ". Voc� tentou adicionar mais " + percentualDeParticipacao);
 		}
+		*/
 		
 		this.cotasSociedade.add(novaCota);
 	}
 	private double somarPercentualAtual() {
 		double percentualAtual = 0.00d;
 		for (CotaSociedade cotaSociedade : cotasSociedade) {
-			percentualAtual += cotaSociedade.percentualDeParticipacao;
+			percentualAtual += cotaSociedade.percentualDeParticipacao.getValor();
 		}
 		return percentualAtual;
+	}
+	public Map<Pessoa, PercentualDeParticipacao> getCotasSociedade() {
+		Map<Pessoa, PercentualDeParticipacao> cotas = new HashMap<>();
+		for (CotaSociedade cota : cotasSociedade) {
+			cotas.put(cota.socio, cota.percentualDeParticipacao);
+		}
+		return cotas;
 	}
 	public void removerSocio(Pessoa socioParaRemover) {
 		Set<CotaSociedade> aux = new HashSet<>();
@@ -55,7 +66,7 @@ public class Juridica extends Pessoa {
 	}
 	
 	private class CotaSociedade {
-		private double percentualDeParticipacao;
+		private PercentualDeParticipacao percentualDeParticipacao;
 		private Pessoa socio;
 		@Override
 		public int hashCode() {
