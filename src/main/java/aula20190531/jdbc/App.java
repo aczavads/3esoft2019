@@ -19,7 +19,7 @@ public class App {
 			
 			criarTabelaPessoa(conn);
 			
-			//excluirTodas(conn);
+			excluirTodas(conn);
 			
 			inserirPessoa(conn, 1, "Fulano de Tal", new Date());
 			
@@ -31,7 +31,10 @@ public class App {
 			inserirPessoa(conn, 2, "Nelson Tenorio Junior", calendar.getTime());
 			
 			//alterar nascimento do Nelson para 11/11/1975 (mudar calendar)
-			//atualizarPessoa(conn, conn, 2, "Nelson Tenorio Junior", calendar.getTime());
+			calendar.set(calendar.DAY_OF_MONTH, 11);
+			calendar.set(calendar.MONTH, 10);
+			calendar.set(calendar.YEAR, 1975);
+			atualizarPessoa(conn, 2, "Nelson Tenorio Junior", calendar.getTime());
 		
 
 			
@@ -44,6 +47,17 @@ public class App {
 		}
 		System.out.println("Fim.");
 	}
+	public static void atualizarPessoa(Connection conexão, Integer id, String nome, Date nascimento) throws Exception {
+		String sql = "update pessoa set nome = ?,  nascimento = ? where id = ?";
+		
+		PreparedStatement statement = conexão.prepareStatement(sql);
+		statement.setInt(3, id);
+		statement.setString(1, nome);
+		statement.setDate(2, new java.sql.Date(nascimento.getTime()));
+		
+		statement.execute();
+		statement.close();
+	}
 	
 	public static void inserirPessoa(Connection conexão, Integer id, String nome, Date nascimento) throws Exception {
 		String sql = "insert into pessoa (id, nome, nascimento) values (?,?,?)";
@@ -55,6 +69,13 @@ public class App {
 		
 		statement.execute();
 		statement.close();
+	}
+	
+	public static void excluirTodas(Connection conexão) throws Exception {
+		String sql = "delete from pessoa";
+		Statement statement = conexão.createStatement();
+		statement.execute(sql);
+		statement.close();		
 	}
 	
 	public static void criarTabelaPessoa(Connection conexão) throws Exception {
