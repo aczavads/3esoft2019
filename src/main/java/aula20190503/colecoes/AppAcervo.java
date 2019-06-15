@@ -2,6 +2,8 @@ package aula20190503.colecoes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import aula20190322.livro.Livro;
 
@@ -21,6 +23,16 @@ public class AppAcervo {
 		
 		Map<String, Integer> contagemDeLivrosPorAutor = recuperarContagemDeLivrosPorAutor(acervo);
 		//listar o nome dos autores com a contagem de seus livros.
+	}
+
+	private static Map<String, Integer> recuperarContagemDeLivrosPorAutor(List<Livro> acervo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static Set<String> recuperarAutoresDistintos(List<Livro> acervo) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

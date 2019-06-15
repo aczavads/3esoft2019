@@ -1,4 +1,4 @@
-package aula20190329.cart√£o;
+package aula20190329.cart„o;
 
 import static org.junit.Assert.assertEquals;
 
@@ -6,17 +6,17 @@ import java.util.List;
 
 import org.junit.Test;
 
-public class TestesComCart√£o {
+public class TestesComCart„o {
 
 	@Test
-	public void testarExtratoNovoCart√£o() {
-		Cart√£o visa3356 = new Cart√£o(5000.00D);
+	public void testarExtratoNovoCart„o() {
+		Cart„o visa3356 = new Cart„o(5000.00D);
 		List<Double> extrato = visa3356.obterExtrato();
 		assertEquals(0, extrato.size());		
 	}
 	@Test
-	public void testarExtratoComMovimenta√ß√µes() {
-		Cart√£o visa3356 = new Cart√£o(5000.00D);
+	public void testarExtratoComMovimentaÁıes() {
+		Cart„o visa3356 = new Cart„o(5000.00D);
 		visa3356.debitar(100.00);
 		visa3356.debitar(15000.00);
 		visa3356.creditar(30.00);

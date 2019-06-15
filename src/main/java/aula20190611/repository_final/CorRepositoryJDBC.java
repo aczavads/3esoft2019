@@ -22,7 +22,7 @@ public class CorRepositoryJDBC implements CorRepository {
 
 	private void criarTabela() throws SQLException {
 		//Não façam isso em casa!!! :D
-		this.connection.createStatement().execute("drop table cor");
+		this.connection.createStatement().execute("drop table if exists cor");
 		this.connection.createStatement().execute("create table if not exists cor ("
 				+ "id integer not null primary key,"
 				+ "nome varchar(255) not null unique"
