@@ -1,4 +1,4 @@
-package aula20190625.configurando_conexoes;
+package aula20190628.tratando_exceções_banco;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -24,21 +24,26 @@ public class CorRepositoryJDBC implements CorRepository {
 		//Não façam isso em casa!!! :D
 		//this.connection.createStatement().execute("drop table if exists cor");
 		this.connection.createStatement().execute("create table if not exists cor ("
-				+ "id integer not null primary key,"
-				+ "nome varchar(255) not null unique"
+				+ "id integer not null,"
+				+ "nome varchar(255) not null unique,"
+				+ "CONSTRAINT cor_pk PRIMARY KEY (id) "
 				+ ")");
 	}
 
 	@Override
 	public void inserir(Cor c) throws Exception {
-		assert c != null;
 		String sql = "insert into cor (id, nome) values (?,?)";
 		PreparedStatement statement = connection.prepareStatement(sql);
 		
 		statement.setInt(1, c.getId());
 		statement.setString(2, c.getNome());
-		
-		statement.execute();
+		try {
+			statement.execute();
+		} catch (Exception e) {
+			if (e.getMessage().contains("cor_pk")) {
+				throw new ChavePrimariaDuplicadaException(e);
+			}
+		}
 		statement.close();
 	}
 

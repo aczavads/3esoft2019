@@ -1,4 +1,4 @@
-package aula20190625.configurando_conexoes;
+package aula20190628.tratando_exceções_banco;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -41,8 +41,6 @@ Exception in thread "main" java.sql.SQLIntegrityConstraintViolationException: Du
 		
 		CorRepository repo = criarCorRepository();
 		System.out.println("Utilizando repo: " + repo.getClass().getName());
-		System.out.println("Assert...");
-		repo.inserir(null);
 		
 		repo.inserir(verde);
 		repo.inserir(rosa);
