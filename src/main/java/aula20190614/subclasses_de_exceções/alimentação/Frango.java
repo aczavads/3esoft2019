@@ -1,4 +1,4 @@
-package aula20190614.subclasses_de_exceções.alimentação;
+package aula20190614.subclasses_de_exceÃ§Ãµes.alimentaÃ§Ã£o;
 
 public class Frango extends Animal {
 	

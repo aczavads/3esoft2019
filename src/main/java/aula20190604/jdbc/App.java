@@ -56,11 +56,11 @@ public class App {
 		System.out.println("Fim.");
 	}
 	
-	public static List<Pessoa> obterPessoas(Connection conex„o) throws Exception {
+	public static List<Pessoa> obterPessoas(Connection conex√£o) throws Exception {
 		List<Pessoa> retorno = new ArrayList<>();
 		
 		String sql = "select id, nome, nascimento from pessoa";
-		Statement statement = conex„o.createStatement();
+		Statement statement = conex√£o.createStatement();
 		ResultSet resultSet = statement.executeQuery(sql);
 		while (resultSet.next())  {
 			int id = resultSet.getInt("id");
@@ -74,10 +74,10 @@ public class App {
 		
 		return retorno;
 	}
-	public static void atualizarPessoa(Connection conex„o, Integer id, String nome, Date nascimento) throws Exception {
+	public static void atualizarPessoa(Connection conex√£o, Integer id, String nome, Date nascimento) throws Exception {
 		String sql = "update pessoa set nome = ?,  nascimento = ? where id = ?";
 		
-		PreparedStatement statement = conex„o.prepareStatement(sql);
+		PreparedStatement statement = conex√£o.prepareStatement(sql);
 		statement.setInt(3, id);
 		statement.setString(1, nome);
 		statement.setDate(2, new java.sql.Date(nascimento.getTime()));
@@ -86,10 +86,10 @@ public class App {
 		statement.close();
 	}
 	
-	public static void inserirPessoa(Connection conex„o, Integer id, String nome, Date nascimento) throws Exception {
+	public static void inserirPessoa(Connection conex√£o, Integer id, String nome, Date nascimento) throws Exception {
 		String sql = "insert into pessoa (id, nome, nascimento) values (?,?,?)";
 		
-		PreparedStatement statement = conex„o.prepareStatement(sql);
+		PreparedStatement statement = conex√£o.prepareStatement(sql);
 		statement.setInt(1, id);
 		statement.setString(2, nome);
 		statement.setDate(3, new java.sql.Date(nascimento.getTime()));
@@ -98,21 +98,21 @@ public class App {
 		statement.close();
 	}
 	
-	public static void excluirTodas(Connection conex„o) throws Exception {
+	public static void excluirTodas(Connection conex√£o) throws Exception {
 		String sql = "delete from pessoa";
-		Statement statement = conex„o.createStatement();
+		Statement statement = conex√£o.createStatement();
 		statement.execute(sql);
 		statement.close();		
 	}
 	
-	public static void criarTabelaPessoa(Connection conex„o) throws Exception {
+	public static void criarTabelaPessoa(Connection conex√£o) throws Exception {
 		String sql = "create table if not exists pessoa ("
 				+ "id integer not null primary key,"
 				+ "nome varchar(255) not null unique,"
 				+ "nascimento date not null"
 				+ ")";
 		
-		Statement statement = conex„o.createStatement();
+		Statement statement = conex√£o.createStatement();
 		statement.execute(sql);
 		statement.close();		
 	}

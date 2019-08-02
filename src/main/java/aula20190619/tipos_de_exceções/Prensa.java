@@ -1,8 +1,8 @@
-package aula20190619.tipos_de_exceções;
+package aula20190619.tipos_de_exceÃ§Ãµes;
 
 public class Prensa {
 	
-	public void conectarRedeElétrica() throws CargaIdentificadaException {
+	public void conectarRedeElÃ©trica() throws CargaIdentificadaException {
 		if (System.currentTimeMillis()%2 == 0) {
 			throw new CargaIdentificadaException();
 		}

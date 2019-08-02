@@ -1,4 +1,4 @@
-package aula20190614.subclasses_de_exceções.deposito;
+package aula20190614.subclasses_de_exceÃ§Ãµes.deposito;
 
 import javax.swing.JOptionPane;
 
@@ -10,11 +10,11 @@ public class App {
 		while (usuarioQuerContinuar) {
 			try {
 				double valor = Double.parseDouble(JOptionPane.showInputDialog("Valor: "));			
-				Depósito d1 = new Depósito("1033-4", valor);
+				DepÃ³sito d1 = new DepÃ³sito("1033-4", valor);
 				System.out.println("Foi.");
-			} catch (Exception exceçãoCapturada) {
-				System.out.println("Erro: " + exceçãoCapturada.getMessage());
-				usuarioQuerContinuar = JOptionPane.showConfirmDialog(null, "Valor inválido, deseja continuar?","Confirme", JOptionPane.YES_NO_OPTION) == 0;
+			} catch (Exception exceÃ§Ã£oCapturada) {
+				System.out.println("Erro: " + exceÃ§Ã£oCapturada.getMessage());
+				usuarioQuerContinuar = JOptionPane.showConfirmDialog(null, "Valor invï¿½lido, deseja continuar?","Confirme", JOptionPane.YES_NO_OPTION) == 0;
 			}
 		}
 		System.out.println("Fim.");

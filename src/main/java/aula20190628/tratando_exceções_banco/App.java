@@ -1,4 +1,4 @@
-package aula20190628.tratando_exceções_banco;
+package aula20190628.tratando_exceÃ§Ãµes_banco;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,7 +45,7 @@ Exception in thread "main" java.sql.SQLIntegrityConstraintViolationException: Du
 		repo.inserir(verde);
 		repo.inserir(rosa);
 		repo.inserir(new Cor(3, "Azul"));	
-		repo.inserir(new Cor(4, "Lilás"));
+		repo.inserir(new Cor(4, "Lilï¿½s"));
 		
 		
 		verde = new Cor(1, "Verde Musgo");
@@ -82,7 +82,7 @@ Exception in thread "main" java.sql.SQLIntegrityConstraintViolationException: Du
 				propriedades.getProperty("url"),
 				propriedades.getProperty("user"),
 				propriedades.getProperty("password"));
-		return new CorRepositoryJDBC(conn); //usar a conexão para persistir os dados.
+		return new CorRepositoryJDBC(conn); //usar a conexï¿½o para persistir os dados.
 	}
 
 

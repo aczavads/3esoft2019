@@ -5,7 +5,7 @@ public class Nome {
 	
 	public Nome(String valor) {
 		if (valor == null || valor.trim().length() < 3) {
-			throw new NomeInválidoException();
+			throw new NomeInvÃ¡lidoException();
 		}
 		this.valor = valor;
 	}

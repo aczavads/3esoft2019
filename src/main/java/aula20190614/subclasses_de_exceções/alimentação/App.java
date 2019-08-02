@@ -1,18 +1,18 @@
-package aula20190614.subclasses_de_exceções.alimentação;
+package aula20190614.subclasses_de_exceÃ§Ãµes.alimentaÃ§Ã£o;
 
 public class App {
 	
 	public static void main(String[] args) {
 		
-		Robô r2d2 = new Robô();
+		RobÃ´ r2d2 = new RobÃ´();
 		
 		Boi boi = new Boi();
 		Frango frango = new Frango();
-		Suíno suíno = new Suíno();
+		SuÃ­no suÃ­no = new SuÃ­no();
 		
 		r2d2.alimentar(boi);
 		r2d2.alimentar(frango);
-		r2d2.alimentar(suíno);
+		r2d2.alimentar(suÃ­no);
 
 		
 		r2d2.alimentar(frango);

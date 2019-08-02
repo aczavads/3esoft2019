@@ -1,4 +1,4 @@
-package aula20190628.tratando_exceções_banco;
+package aula20190628.tratando_exceÃ§Ãµes_banco;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class CorRepositoryMemória implements CorRepository {
+public class CorRepositoryMemÃ³ria implements CorRepository {
 	private Set<Cor> cores = new HashSet<Cor>();
 
 	public void inserir(Cor c) {

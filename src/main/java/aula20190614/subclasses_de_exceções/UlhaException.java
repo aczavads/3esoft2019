@@ -1,4 +1,4 @@
-package aula20190614.subclasses_de_exceções;
+package aula20190614.subclasses_de_exceÃ§Ãµes;
 
 public class UlhaException extends RuntimeException {
 

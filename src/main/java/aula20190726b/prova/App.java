@@ -9,12 +9,12 @@ public class App {
 	public static void main(String[] args) {
 		Cor azul = new Cor(new Nome("Azul"));
 		Cor rosa = new Cor(new Nome("Rosa"));
-		Cor lil·s = new Cor(new Nome("Lil·s"));
+		Cor lil√°s = new Cor(new Nome("LilÔøΩs"));
 		
 		Produto pincelBic = new Produto(
 				new Nome("Pincel Bic Marcador Plus"), 
-				new Cor[] {azul, rosa, lil·s}, 
-				lil·s);
+				new Cor[] {azul, rosa, lil√°s}, 
+				lil√°s);
 	}
 
 }

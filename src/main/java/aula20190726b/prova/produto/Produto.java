@@ -9,15 +9,15 @@ import aula20190726b.prova.value_objects.Nome;
 
 public class Produto {
 	private Nome nome;
-	private Set<Cor> coresDisponÌveis = new HashSet<>();
-	private Cor corPadr„o;
+	private Set<Cor> coresDispon√≠veis = new HashSet<>();
+	private Cor corPadr√£o;
 	
-	public Produto(Nome nome, Cor[] cores, Cor corPadr„o) {
+	public Produto(Nome nome, Cor[] cores, Cor corPadr√£o) {
 		this.nome = nome;
 		for (Cor cor : cores) {
-			this.coresDisponÌveis.add(cor);
+			this.coresDispon√≠veis.add(cor);
 		}
-		definirCorPadr„o(corPadr„o);
+		definirCorPadr√£o(corPadr√£o);
 	}
 	
 	public Nome getNome() {
@@ -26,11 +26,11 @@ public class Produto {
 	public void setNome(Nome nome) {
 		this.nome = nome;
 	}
-	public void definirCorPadr„o(Cor corPadr„o) {
-		if (corPadr„o == null || !this.coresDisponÌveis.contains(corPadr„o)) {
-			throw new CorPadr„oInv·lidaException();
+	public void definirCorPadr√£o(Cor corPadr√£o) {
+		if (corPadr√£o == null || !this.coresDispon√≠veis.contains(corPadr√£o)) {
+			throw new CorPadr√£oInv√°lidaException();
 		}
-		this.corPadr„o = corPadr„o;
+		this.corPadr√£o = corPadr√£o;
 	}
 
 }

@@ -18,8 +18,8 @@ public class App {
 				"postgres",
 				"unicesumar");
 
-		CorRepository repo = new CorRepositoryJDBC(conn); //usar a conexão para persistir os dados.
-		CorRepository repo = new CorRepositoryMemória(); //manter  os dados em uma coleção.
+		CorRepository repo = new CorRepositoryJDBC(conn); //usar a conexï¿½o para persistir os dados.
+		CorRepository repo = new CorRepositoryMemÃ³ria(); //manter  os dados em uma coleï¿½ï¿½o.
 		CorRepository repo = null;
 		*/
 		CorRepository repo = criarCorRepositoryAleatoriamente();
@@ -28,7 +28,7 @@ public class App {
 		repo.inserir(verde);
 		repo.inserir(rosa);
 		repo.inserir(new Cor(3, "Azul"));	
-		repo.inserir(new Cor(4, "Lilás"));
+		repo.inserir(new Cor(4, "Lilï¿½s"));
 		
 		
 		verde = new Cor(1, "Verde Musgo");
@@ -49,13 +49,13 @@ public class App {
 	private static CorRepository criarCorRepositoryAleatoriamente() throws Exception {
 		boolean ehPar = System.currentTimeMillis()%2 == 0;
 		if (ehPar) {
-			return new CorRepositoryMemória();
+			return new CorRepositoryMemÃ³ria();
 		} else {
 			Connection conn = DriverManager.getConnection(
 					"jdbc:postgresql://localhost:5432/3esoft2019",
 					"postgres",
 					"unicesumar");
-			return new CorRepositoryJDBC(conn); //usar a conexão para persistir os dados.
+			return new CorRepositoryJDBC(conn); //usar a conexï¿½o para persistir os dados.
 		}
 	}
 

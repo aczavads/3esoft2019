@@ -19,17 +19,17 @@ public class Lista {
 		dados = novoArray;		
 	}
 
-	public Object pegar(int posição) {
-		return dados[posição];
+	public Object pegar(int posiÃ§o) {
+		return dados[posiÃ§o];
 	}
 
-	public void remover(int posição) {
+	public void remover(int posiÃ§Ã£o) {
 		int tamanho = dados.length;
 		
 		Object[] novoArray = new Object[tamanho-1];
 		int contadorNovo = 0;
 		for (int contador = 0; contador < tamanho; contador++) {
-			if (contador != posição) {
+			if (contador != posiÃ§Ã£o) {
 				novoArray[contadorNovo] = dados[contador];	
 				contadorNovo++;
 			} 

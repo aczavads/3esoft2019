@@ -1,4 +1,4 @@
-package aula20190619.tipos_de_exceções;
+package aula20190619.tipos_de_exceÃ§Ãµes;
 
 import javax.swing.JOptionPane;
 
@@ -7,10 +7,10 @@ public class App {
 	public static void main(String[] args) {
 		Prensa p1 = new Prensa();		
 		try {
-			p1.conectarRedeElétrica();
-			System.out.println("Conectado à rede elétrica! :D");			
+			p1.conectarRedeElÃ©trica();
+			System.out.println("Conectado Ã  rede elÃ©trica! :D");			
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Erro ao conectar à rede elétrica: " + e.getMessage());
+			JOptionPane.showMessageDialog(null, "Erro ao conectar Ã  rede elÃ©trica: " + e.getMessage());
 			System.out.println("Aborted.");
 			//e.printStackTrace();
 			//throw new RuntimeException(e);

@@ -1,4 +1,4 @@
-package aula20190619.tipos_de_exceções;
+package aula20190619.tipos_de_exceÃ§Ãµes;
 
 public class CargaIdentificadaException extends Exception {
 	

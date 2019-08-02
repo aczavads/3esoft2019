@@ -1,18 +1,18 @@
-package aula20190614.subclasses_de_exceções;
+package aula20190614.subclasses_de_exceÃ§Ãµes;
 
 public class App {
 	
 	public static void main(String[] args) {
 		
-		gerarExceção();
+		gerarExceÃ§Ã£o();
 		
 	}
 	
-	public static void gerarExceção() {
-		//RuntimeException umaExceção = new RuntimeException("Ulha!");
-		RuntimeException umaExceção = new UlhaException();
+	public static void gerarExceÃ§Ã£o() {
+		//RuntimeException umaExceÃ§Ã£o = new RuntimeException("Ulha!");
+		RuntimeException umaExceÃ§Ã£o = new UlhaException();
 		
-		throw umaExceção;		
+		throw umaExceÃ§Ã£o;		
 	}
 
 }

@@ -3,24 +3,24 @@ package aula20190726b.prova;
 import org.junit.Test;
 
 import aula20190726b.prova.cor.Cor;
-import aula20190726b.prova.produto.CorPadr„oInv·lidaException;
+import aula20190726b.prova.produto.CorPadr√£oInv√°lidaException;
 import aula20190726b.prova.produto.Produto;
 import aula20190726b.prova.value_objects.Nome;
-import aula20190726b.prova.value_objects.NomeInv·lidoException;
+import aula20190726b.prova.value_objects.NomeInv√°lidoException;
 
 public class TestesComProdutosNomesCores {
 
-	@Test(expected=NomeInv·lidoException.class)
+	@Test(expected=NomeInv√°lidoException.class)
 	public void testarNomeVazio() {
 		new Nome("");
 	}
-	@Test(expected=NomeInv·lidoException.class)
+	@Test(expected=NomeInv√°lidoException.class)
 	public void testarNomeCurto() {
-		new Nome("ZÈ");
+		new Nome("ZÔøΩ");
 	}
 	@Test
 	public void testarNomesCorretos() {
-		new Nome("JosÈ");
+		new Nome("JosÔøΩ");
 		new Nome("Maria Almeida de Albuquerque");
 	}
 
@@ -28,24 +28,24 @@ public class TestesComProdutosNomesCores {
 	public void testarProdutoCorreto() {
 		Cor azul = new Cor(new Nome("Azul"));
 		Cor rosa = new Cor(new Nome("Rosa"));
-		Cor lil·s = new Cor(new Nome("Lil·s"));
+		Cor lil√°s = new Cor(new Nome("Lil√°s"));
 		
 		Produto pincelBic = new Produto(
 				new Nome("Pincel Bic Marcador Plus"), 
-				new Cor[] {azul, rosa, lil·s}, 
-				lil·s);
+				new Cor[] {azul, rosa, lil√°s}, 
+				lil√°s);
 	}
 	
-	@Test(expected=CorPadr„oInv·lidaException.class)
-	public void testarProdutoComCorPadr„oInv·lida() {
+	@Test(expected=CorPadr√£oInv√°lidaException.class)
+	public void testarProdutoComCorPadr√£oInv√°lida() {
 		Cor azul = new Cor(new Nome("Azul"));
 		Cor rosa = new Cor(new Nome("Rosa"));
-		Cor lil·s = new Cor(new Nome("Lil·s"));
+		Cor lil√°s = new Cor(new Nome("Lil√°s"));
 		
 		Produto pincelBic = new Produto(
 				new Nome("Pincel Bic Marcador Plus"), 
 				new Cor[] {azul, rosa}, 
-				lil·s);
+				lil√°s);
 	}
 	
 

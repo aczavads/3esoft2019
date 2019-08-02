@@ -1,4 +1,4 @@
-package aula20190628.tratando_exceções_banco;
+package aula20190628.tratando_exceÃ§Ãµes_banco;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,7 +13,7 @@ public class CorRepositoryJDBC implements CorRepository {
 
 	public CorRepositoryJDBC(Connection connection) throws Exception {
 		if (connection == null) {
-			throw new RuntimeException("Não é possível instanciar um CorRepositoryJDBC com conexão nula!");
+			throw new RuntimeException("Nï¿½o ï¿½ possï¿½vel instanciar um CorRepositoryJDBC com conexï¿½o nula!");
 		}
 		this.connection = connection;
 		
@@ -21,7 +21,7 @@ public class CorRepositoryJDBC implements CorRepository {
 	}
 
 	private void criarTabela() throws SQLException {
-		//Não façam isso em casa!!! :D
+		//Nï¿½o faï¿½am isso em casa!!! :D
 		//this.connection.createStatement().execute("drop table if exists cor");
 		this.connection.createStatement().execute("create table if not exists cor ("
 				+ "id integer not null,"

@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class CorRepositoryMemória implements CorRepository {
+public class CorRepositoryMemÃ³ria implements CorRepository {
 	private Set<Cor> cores = new HashSet<>();
 
 	public void inserir(Cor c) {

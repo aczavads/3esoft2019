@@ -1,13 +1,13 @@
-package aula20190614.subclasses_de_exceções.deposito;
+package aula20190614.subclasses_de_exceÃ§Ãµes.deposito;
 
-public class Depósito {
+public class DepÃ³sito {
 
 	private final String conta;
 	private final double valor;
 
-	public Depósito(String conta, double valor) {
+	public DepÃ³sito(String conta, double valor) {
 		if (valor <= 0.00) {
-			throw new ValorDeDepósitoInválidoException("Valor depositado: " + valor);
+			throw new ValorDeDepÃ³sitoInvÃ¡lidoException("Valor depositado: " + valor);
 		}
 		this.conta = conta;
 		this.valor = valor;

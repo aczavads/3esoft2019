@@ -13,14 +13,14 @@ public class App {
 		
 		Connection conn = null; //DriverManager.getConnection...
 
-		//CorRepository repo = new CorRepositoryJDBC(conn); //usar a conexão para persistir os dados.
-		CorRepository repo = new CorRepositoryMemória(); //manter  os dados em uma coleção.
+		//CorRepository repo = new CorRepositoryJDBC(conn); //usar a conexï¿½o para persistir os dados.
+		CorRepository repo = new CorRepositoryMemÃ³ria(); //manter  os dados em uma coleï¿½ï¿½o.
 		//CorRepository repo = null;
 		
 		repo.inserir(verde);
 		repo.inserir(rosa);
 		repo.inserir(new Cor(3, "Azul"));	
-		repo.inserir(new Cor(4, "Lilás"));
+		repo.inserir(new Cor(4, "Lilï¿½s"));
 		
 		
 		verde = new Cor(1, "Verde Musgo");
