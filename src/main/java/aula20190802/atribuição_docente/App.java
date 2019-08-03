@@ -13,9 +13,12 @@ public class App {
 		Curso ads = new Curso("Análise e Desenvolvimento de Sistemas");
 		Curso esoft = new Curso("Engenharia de Software");
 		
-		ads.definirCoordenador(new Date(2005,0,1), new Date(2009,11,31), márcia);
+		//ads.definirCoordenador(new Coordenador(início, fim, professor));
 		
-		System.out.println(ads.consultarCoordenadorEm(new Date(2006,6,6)).getProfessor().getNome());
+		ads.definirCoordenador(new Date(2005-1900,0,1), new Date(2009-1900,11,31), márcia);
+		ads.definirCoordenador(new Date(2010-1900,0,1), null, yorah);
+		
+		System.out.println(ads.recuperarCoordenadorEm(new Date(2006-1900,6,6)).getProfessor().getNome());
 	}
 
 }

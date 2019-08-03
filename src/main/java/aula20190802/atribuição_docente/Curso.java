@@ -16,14 +16,29 @@ public class Curso {
 		this.coordenadores.add(new Coordenador(início, fim, professor));
 	}
 	
-	public Coordenador consultarCoordenadorEm(Date data) {
+	public Coordenador recuperarCoordenadorEm(Date data) {
+		
+		return coordenadores
+		  .stream()
+		  .filter(
+		      coordenador -> 
+   		         data.after(coordenador.getInício()) && data.before(hojeSeNull(coordenador.getFim()))).findFirst().get();
+		/*
 		Coordenador c = null;
 		for (Coordenador coordenador : coordenadores) {
-			if (data.after(coordenador.getInício()) && data.before(coordenador.getFim())) {
+			if (data.after(coordenador.getInício()) && data.before(hojeSeNull(coordenador.getFim()))) {
 				return coordenador;
 			}
 		}
 		return c;
+		*/
+	}
+
+	private Date hojeSeNull(Date data) {
+		if (data == null) {
+			return new Date();
+		}
+		return data;
 	}
 
 	public String getNome() {
