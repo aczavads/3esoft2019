@@ -7,10 +7,10 @@ public class App {
 	public static void main(String[] args) {
 		Professor marcello = new Professor("Marcello Erick Bonfim");
 		Professor yorah = new Professor("Yorah Bosse");
-		Professor nelson = new Professor("Nelson Tenório");
-		Professor márcia = new Professor("Márcia Pascutti");
+		Professor nelson = new Professor("Nelson Ten�ro");
+		Professor márcia = new Professor("M�rcia Pascutti");
 		
-		Curso ads = new Curso("Análise e Desenvolvimento de Sistemas");
+		Curso ads = new Curso("An�lise e Desenvolvimento de Sistemas");
 		Curso esoft = new Curso("Engenharia de Software");
 		
 		//ads.definirCoordenador(new Coordenador(início, fim, professor));
