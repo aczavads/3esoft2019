@@ -1,0 +1,171 @@
+{
+	"_type": "export",
+	"__export_format": 3,
+	"__export_date": "2019-08-23T23:22:13.388Z",
+	"__export_source": "insomnia.desktop.app:v6.0.2",
+	"resources": [
+		{
+			"_id": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"created": 1548092741201,
+			"description": "",
+			"modified": 1548092741201,
+			"name": "Insomnia",
+			"parentId": null,
+			"_type": "workspace"
+		},
+		{
+			"_id": "env_75c092f695d745a795ac648cf30c0fcc",
+			"color": null,
+			"created": 1548092741229,
+			"data": {},
+			"isPrivate": false,
+			"metaSortKey": 1548092741230,
+			"modified": 1548092741229,
+			"name": "New Environment",
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"_type": "environment"
+		},
+		{
+			"_id": "jar_15893c298c3c428e9f3ac42e25285bc8",
+			"cookies": [],
+			"created": 1548092741231,
+			"modified": 1548092741231,
+			"name": "Default Jar",
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"_type": "cookie_jar"
+		},
+		{
+			"_id": "req_b53a33bc918d495084581d0d0b4abb35",
+			"authentication": {},
+			"body": {},
+			"created": 1566601587960,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1566601587960,
+			"method": "GET",
+			"modified": 1566602485923,
+			"name": "obter todas as disciplina",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/disciplinas",
+			"_type": "request"
+		},
+		{
+			"_id": "req_015cb124be994ca4bcf83aabe38356c0",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\": \"xxxx\"\n}"
+			},
+			"created": 1566601623215,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b0b4b243e33c4cbdb8cdd072097de6e1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566601623215,
+			"method": "POST",
+			"modified": 1566602451615,
+			"name": "criar disciplina",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/disciplinas",
+			"_type": "request"
+		},
+		{
+			"_id": "req_0d8d2314467d40dc97dd1a115a427aeb",
+			"authentication": {},
+			"body": {},
+			"created": 1566601807687,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1566601807687,
+			"method": "DELETE",
+			"modified": 1566602046019,
+			"name": "remover disciplina",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/disciplinas/9e15acbe-8389-4dd4-9e4e-fa99eeeadc57",
+			"_type": "request"
+		},
+		{
+			"_id": "req_e2474960f2b841a8a01eca1fa22a8aea",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"id\": \"88b67576-f940-4163-b233-472dadc2052b\",\n\t\"nome\": \"Introdução a Engenharia de Software\"\n}"
+			},
+			"created": 1566602346179,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_43bfd192b83d4204b1c7104bb15cdb63",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566602346179,
+			"method": "PUT",
+			"modified": 1566602402125,
+			"name": "atualizar disciplina ",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/disciplinas/88b67576-f940-4163-b233-472dadc2052b",
+			"_type": "request"
+		},
+		{
+			"_id": "req_b5c76597aa09487ea38701191ac60df7",
+			"authentication": {},
+			"body": {},
+			"created": 1566602462944,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1566601587910,
+			"method": "GET",
+			"modified": 1566602488826,
+			"name": "obter disciplina pelo id",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/disciplinas/88b67576-f940-4163-b233-472dadc2052b",
+			"_type": "request"
+		}
+	]
+}

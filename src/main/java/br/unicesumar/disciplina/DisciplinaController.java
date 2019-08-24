@@ -17,12 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class DisciplinaController {
 	@Autowired
 	private DisciplinaRepository repo;
-	
+
+	//curl -X GET http://localhost:9090/api/disciplinas
 	@GetMapping
 	public List<Disciplina> getAll() {
 		return repo.findAll();
 	}
-	
+	//curl -v -H "Content-Type: application/json" -X POST http://localhost:9090/api/disciplinas -d "{\"nome\": \"teste\"}"
 	@PostMapping
 	public String post(@RequestBody Disciplina nova) {
 		repo.save(nova);
@@ -39,8 +40,9 @@ public class DisciplinaController {
 		return repo.findById(id).get();
 	}
 	
+	//curl -v -H "Content-Type: application/json" -X PUT http://localhost:9090/api/disciplinas/7c31bc81-bcae-4b63-8d28-3d07e2fa31f9 -d "{\"id\":\"7c31bc81-bcae-4b63-8d28-3d07e2fa31f9\", \"nome\": \"teste ahhhhhhh!\"}"
 	@PutMapping("/{id}")
-	public void getById(@PathVariable("id") String id, @RequestBody Disciplina disciplina) {
+	public void put(@PathVariable("id") String id, @RequestBody Disciplina disciplina) {
 		if (!id.equals(disciplina.getId())) {
 			throw new RuntimeException("Id da disciplina está incorreto!");
 		}
