@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.unicesumar.professor.Professor;
+
 @RestController
 @RequestMapping("/api/disciplinas")
 public class DisciplinaController {
@@ -26,6 +28,11 @@ public class DisciplinaController {
 	//curl -v -H "Content-Type: application/json" -X POST http://localhost:9090/api/disciplinas -d "{\"nome\": \"teste\"}"
 	@PostMapping
 	public String post(@RequestBody Disciplina nova) {
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		for (Professor p : nova.getMinistrantes()) {
+			System.out.println(p.getId());
+		}
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		repo.save(nova);
 		return nova.getId();
 	}

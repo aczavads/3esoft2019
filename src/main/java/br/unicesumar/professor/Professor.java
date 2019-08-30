@@ -27,6 +27,4 @@ public class Professor {
 		this.nome = nome;
 	}
 	
-	
-
 }

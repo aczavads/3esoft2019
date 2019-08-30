@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-08-23T23:22:13.388Z",
+	"__export_date": "2019-08-30T23:02:36.959Z",
 	"__export_source": "insomnia.desktop.app:v6.0.2",
 	"resources": [
 		{
@@ -44,8 +44,8 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601587960,
 			"method": "GET",
-			"modified": 1566602485923,
-			"name": "obter todas as disciplina",
+			"modified": 1567206036158,
+			"name": "obter todas as disciplinas",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
 			"settingDisableRenderRequestBody": false,
@@ -62,7 +62,7 @@
 			"authentication": {},
 			"body": {
 				"mimeType": "application/json",
-				"text": "{\n\t\"nome\": \"xxxx\"\n}"
+				"text": "{\n\t\"nome\": \"Gerenciamento de Banco de Dados II\",\n\t\"ministrantes\" : [\n\t\t{\"id\": \"5a82f88f-b085-42b6-b7e7-45cf4ff60953\"}\t\t\n\t]\n}"
 			},
 			"created": 1566601623215,
 			"description": "",
@@ -76,7 +76,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601623215,
 			"method": "POST",
-			"modified": 1566602451615,
+			"modified": 1567206032474,
 			"name": "criar disciplina",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -131,7 +131,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566602346179,
 			"method": "PUT",
-			"modified": 1566602402125,
+			"modified": 1567206109340,
 			"name": "atualizar disciplina ",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -141,7 +141,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:9090/api/disciplinas/88b67576-f940-4163-b233-472dadc2052b",
+			"url": "http://localhost:9090/api/disciplinas/88b67576-f940-4163-b233-472dadc2052b/remover-professor/",
 			"_type": "request"
 		},
 		{
@@ -154,7 +154,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601587910,
 			"method": "GET",
-			"modified": 1566602488826,
+			"modified": 1567204293754,
 			"name": "obter disciplina pelo id",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -165,6 +165,93 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "http://localhost:9090/api/disciplinas/88b67576-f940-4163-b233-472dadc2052b",
+			"_type": "request"
+		},
+		{
+			"_id": "req_3209f87d2b944e0e93d14d6a24c0413d",
+			"authentication": {},
+			"body": {},
+			"created": 1567204322382,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1566601587935,
+			"method": "GET",
+			"modified": 1567206019226,
+			"name": "obter todos os professores",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/professores",
+			"_type": "request"
+		},
+		{
+			"_id": "req_ab53ba3740d0427ab61f2aea7b922385",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\": \"Marcello Erick Bonfim\"\n}"
+			},
+			"created": 1567204347652,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b0b4b243e33c4cbdb8cdd072097de6e1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566601605587.5,
+			"method": "POST",
+			"modified": 1567206010329,
+			"name": "criar professor",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/professores",
+			"_type": "request"
+		},
+		{
+			"_id": "req_d95d5c782b694bada6d16b543869184c",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"id\": \"5a82f88f-b085-42b6-b7e7-45cf4ff60953\",\n\t\"nome\": \"Marcello\"\n}"
+			},
+			"created": 1567205161387,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_43bfd192b83d4204b1c7104bb15cdb63",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566602076933,
+			"method": "PUT",
+			"modified": 1567206016501,
+			"name": "atualizar professor",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/professores/5a82f88f-b085-42b6-b7e7-45cf4ff60953",
 			"_type": "request"
 		}
 	]
