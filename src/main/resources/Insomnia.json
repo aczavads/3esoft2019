@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-08-30T23:02:36.959Z",
+	"__export_date": "2019-08-30T23:32:30.712Z",
 	"__export_source": "insomnia.desktop.app:v6.0.2",
 	"resources": [
 		{
@@ -44,7 +44,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601587960,
 			"method": "GET",
-			"modified": 1567206036158,
+			"modified": 1567207838153,
 			"name": "obter todas as disciplinas",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -154,7 +154,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601587910,
 			"method": "GET",
-			"modified": 1567204293754,
+			"modified": 1567206647309,
 			"name": "obter disciplina pelo id",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -164,7 +164,7 @@
 			"settingRebuildPath": true,
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
-			"url": "http://localhost:9090/api/disciplinas/88b67576-f940-4163-b233-472dadc2052b",
+			"url": "http://localhost:9090/api/disciplinas/0d34d26b-6b4f-45bc-927d-5d9b3258ece8",
 			"_type": "request"
 		},
 		{
@@ -252,6 +252,38 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "http://localhost:9090/api/professores/5a82f88f-b085-42b6-b7e7-45cf4ff60953",
+			"_type": "request"
+		},
+		{
+			"_id": "req_29993ca624bd40379bb57e8fcc9c1b97",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"id\": \"88b67576-f940-4163-b233-472dadc2052b\",\n\t\"nome\": \"Introdução a Engenharia de Software\"\n}"
+			},
+			"created": 1567206280202,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_43bfd192b83d4204b1c7104bb15cdb63",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566602211556,
+			"method": "DELETE",
+			"modified": 1567207624449,
+			"name": "remover professor da disciplina",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/disciplinas/0d34d26b-6b4f-45bc-927d-5d9b3258ece8/ministrantes/5a82f88f-b085-42b6-b7e7-45cf4ff60953",
 			"_type": "request"
 		}
 	]

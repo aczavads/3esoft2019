@@ -56,6 +56,19 @@ public class DisciplinaController {
 		repo.save(disciplina);
 	}
 	
+	@DeleteMapping("/{id}/ministrantes/{idProfessor}")
+	public void deleteMinistrante(@PathVariable("id") String id, @PathVariable("idProfessor") String idProfessor) {
+		Disciplina d = repo.findById(id).get();
+		Professor paraRemover = null;
+		for (Professor ministrante : d.getMinistrantes()) {
+			if (ministrante.getId().equals(idProfessor)) {
+				paraRemover = ministrante;
+			}
+		}
+		d.getMinistrantes().remove(paraRemover);
+		repo.save(d);
+	}
+	
 }
  
 
