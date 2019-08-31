@@ -3,6 +3,7 @@ package br.unicesumar.disciplina;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -44,5 +45,19 @@ public class Disciplina {
 	
 	public void setMinistrantes(Set<Professor> ministrantes) {
 		this.ministrantes = ministrantes;
+	}
+	public void removerMinistrantePeloId(String idProfessor) {
+		ministrantes = this.getMinistrantes().stream()
+				.filter(p -> !p.getId().equals(idProfessor))
+				.collect(Collectors.toSet());
+		/*
+		Professor paraRemover = null;
+		for (Professor ministrante : this.getMinistrantes()) {
+			if (ministrante.getId().equals(idProfessor)) {
+				paraRemover = ministrante;
+			}
+		}
+		this.getMinistrantes().remove(paraRemover);
+		*/
 	}
 }

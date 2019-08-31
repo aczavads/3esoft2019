@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.unicesumar.disciplina.Disciplina;
+
 @RestController
 @RequestMapping("/api/professores")
 public class ProfessorController {
@@ -42,6 +44,13 @@ public class ProfessorController {
 	public void delete(@PathVariable String id) {
 		repo.deleteById(id);
 	}
+	@DeleteMapping("/{id}/enderecos/{idEndereco}")
+	public void deleteEndereco(@PathVariable("id") String id, @PathVariable("idEndereco") String idEndereco) {
+		Professor p = repo.findById(id).get();
+		p.removerEnderecoPeloId(idEndereco);
+		repo.save(p);
+	}
+	
 }
 
 
