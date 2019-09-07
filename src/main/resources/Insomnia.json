@@ -1,7 +1,7 @@
 {
 	"_type": "export",
 	"__export_format": 3,
-	"__export_date": "2019-08-30T23:32:30.712Z",
+	"__export_date": "2019-09-07T01:11:59.025Z",
 	"__export_source": "insomnia.desktop.app:v6.0.2",
 	"resources": [
 		{
@@ -177,7 +177,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601587935,
 			"method": "GET",
-			"modified": 1567206019226,
+			"modified": 1567812861097,
 			"name": "obter todos os professores",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -209,7 +209,7 @@
 			"isPrivate": false,
 			"metaSortKey": -1566601605587.5,
 			"method": "POST",
-			"modified": 1567206010329,
+			"modified": 1567812797488,
 			"name": "criar professor",
 			"parameters": [],
 			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
@@ -284,6 +284,148 @@
 			"settingSendCookies": true,
 			"settingStoreCookies": true,
 			"url": "http://localhost:9090/api/disciplinas/0d34d26b-6b4f-45bc-927d-5d9b3258ece8/ministrantes/5a82f88f-b085-42b6-b7e7-45cf4ff60953",
+			"_type": "request"
+		},
+		{
+			"_id": "req_da74db8cf775408cae28183ae3e0ec69",
+			"authentication": {},
+			"body": {},
+			"created": 1567812682995,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1566601587922.5,
+			"method": "GET",
+			"modified": 1567816506592,
+			"name": "obter todos os produtos",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/produtos",
+			"_type": "request"
+		},
+		{
+			"_id": "req_36e5449c98114c59b55f15c53b57422f",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"nome\": \"Creme Dove Anti Assaduras\",\n\t\"preco\": 15.10 \n}"
+			},
+			"created": 1567812742546,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b0b4b243e33c4cbdb8cdd072097de6e1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566601596773.75,
+			"method": "POST",
+			"modified": 1567816548551,
+			"name": "criar produto",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/produtos",
+			"_type": "request"
+		},
+		{
+			"_id": "req_aa6a5480cdef448da374ada1ef8bbfe9",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": ""
+			},
+			"created": 1567812887066,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_43bfd192b83d4204b1c7104bb15cdb63",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566601942310,
+			"method": "DELETE",
+			"modified": 1567812947692,
+			"name": "excluir produto",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/produtos/8b742f1e-4f21-4aca-8dce-0303b0bc6d1d",
+			"_type": "request"
+		},
+		{
+			"_id": "req_351002b2e1ac47c2aafc464d2b3ec058",
+			"authentication": {},
+			"body": {},
+			"created": 1567816377168,
+			"description": "",
+			"headers": [],
+			"isPrivate": false,
+			"metaSortKey": -1566601587916.25,
+			"method": "GET",
+			"modified": 1567818698027,
+			"name": "obter todos os pedidos",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/pedidos",
+			"_type": "request"
+		},
+		{
+			"_id": "req_96142498e94d4fa5bfba7fea5481f7cd",
+			"authentication": {},
+			"body": {
+				"mimeType": "application/json",
+				"text": "{\n\t\"numero\": 99,\n\t\"itens\": [\n\t\t{\"quantidade\": 5, \"valorUnitario\": 159.99, \"descontoPercentual\": 10.00, \"produto\": {\"id\": \"7413b997-cc90-459a-bcde-07cbf1201f91\"}},\n\t\t{\"quantidade\": 3, \"valorUnitario\": 15.99, \"descontoPercentual\": 0.00, \"produto\": {\"id\": \"02a4c304-7474-49c0-8c39-978408447043\"}}\n\t]\n}"
+			},
+			"created": 1567816393591,
+			"description": "",
+			"headers": [
+				{
+					"id": "pair_b0b4b243e33c4cbdb8cdd072097de6e1",
+					"name": "Content-Type",
+					"value": "application/json"
+				}
+			],
+			"isPrivate": false,
+			"metaSortKey": -1566601592366.875,
+			"method": "POST",
+			"modified": 1567818286984,
+			"name": "criar pedido",
+			"parameters": [],
+			"parentId": "wrk_f4e6e7165f3649758b410369eddcab73",
+			"settingDisableRenderRequestBody": false,
+			"settingEncodeUrl": true,
+			"settingMaxTimelineDataSize": 1000,
+			"settingRebuildPath": true,
+			"settingSendCookies": true,
+			"settingStoreCookies": true,
+			"url": "http://localhost:9090/api/pedidos",
 			"_type": "request"
 		}
 	]
