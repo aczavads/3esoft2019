@@ -64,21 +64,21 @@ public class TestesBásicos {
 		p1.adicionarItem("Omo",10.00, 20.00, 0.00); // (produto, quantidade, valorUnitario, descontoPercentual)
 		p1.adicionarItem("Soja",20.00, 25.00, 10.00); // (produto, quantidade, valorUnitario, descontoPercentual)
 		
-		assertEquals(650.00, p1.getValorTotal());
+		assertEquals(650.00, p1.getValorTotal(), 0.00);
 		assertEquals(2, p1.contarItens());
-		assertEquals(10.00, p1.getItem("Omo").getQuantidade());
-		assertEquals(20.00, p1.getItem("Soja").getQuantidade());
+		assertEquals(10.00, p1.getItem("Omo").getQuantidade(), 0.00);
+		assertEquals(20.00, p1.getItem("Soja").getQuantidade(), 0.00);
 
 		Pedido p2 = new Pedido(126); //Pedido(numero)
 		p2.adicionarItem("Cuscuz",1.00, 2.50, 0.00); // (produto, quantidade, valorUnitario, descontoPercentual)
 		p2.adicionarItem("Jambu",2.00, 10.00, 20.00); // (produto, quantidade, valorUnitario, descontoPercentual)
 		p2.adicionarItem("Omo",1.00, 1.00, 0.00); // (produto, quantidade, valorUnitario, descontoPercentual)
 		
-		assertEquals(19.50, p2.getValorTotal());
+		assertEquals(19.50, p2.getValorTotal(), 0.00);
 		assertEquals(3, p2.contarItens());
-		assertEquals(1.00, p2.getItem("Cuscuz").getQuantidade());
-		assertEquals(2.00, p2.getItem("Jambu").getQuantidade());
-		assertEquals(1.00, p2.getItem("Omo").getQuantidade());
+		assertEquals(1.00, p2.getItem("Cuscuz").getQuantidade(), 0.00);
+		assertEquals(2.00, p2.getItem("Jambu").getQuantidade(), 0.00);
+		assertEquals(1.00, p2.getItem("Omo").getQuantidade(), 0.00);
 		
 	}
 
