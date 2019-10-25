@@ -1,7 +1,7 @@
 package br.unicesumar.disciplina;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import br.unicesumar.base.BaseRepository;
 
-public interface DisciplinaRepository extends JpaRepository<Disciplina, String>{
+public interface DisciplinaRepository extends BaseRepository<Disciplina>{
 
 }

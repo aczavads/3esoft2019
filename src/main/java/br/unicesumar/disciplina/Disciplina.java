@@ -2,22 +2,18 @@ package br.unicesumar.disciplina;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import br.unicesumar.base.BaseEntity;
 import br.unicesumar.professor.Professor;
 
 @Entity
-public class Disciplina {
-	@Id
-	private String id;
+public class Disciplina extends BaseEntity {
 	private String nome;
 	
 	@ManyToMany
@@ -27,10 +23,7 @@ public class Disciplina {
 	private Set<Professor> ministrantes = new HashSet<>();
 
 	public Disciplina() {
-		id = UUID.randomUUID().toString();
-	}
-	public String getId() {
-		return id;
+		super();
 	}
 	public String getNome() {
 		return nome;
