@@ -1,7 +1,7 @@
 package br.unicesumar.pessoa;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import br.unicesumar.base.BaseRepository;
 
-public interface PessoaRepository extends JpaRepository<Pessoa, String>{
+public interface PessoaRepository extends BaseRepository<Pessoa>{
 
 }
