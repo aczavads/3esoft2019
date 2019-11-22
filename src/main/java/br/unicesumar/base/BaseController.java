@@ -55,10 +55,12 @@ public abstract class BaseController<ENTITY extends BaseEntity, REPOSITORY exten
 	@PutMapping("/{id}")
 	public ResponseEntity<String> put(@PathVariable String id, @RequestBody ENTITY object) {
 		if (!Objects.equals(id, object.getId())) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Requisi��o inv�lida! Verifique os IDs da entidade!"); //badRequest().build();
+			//return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Requisiçao inválida! Verifique os IDs da entidade!"); //badRequest().build();
+			return ResponseEntity.status(400).body("Requisiçao inválida! Verifique os IDs da entidade!"); //badRequest().build();		}
 		}
 		if (!repo.findById(id).isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).build(); //.notFound().build();
+			//return ResponseEntity.status(HttpStatus.NOT_FOUND).build(); //.notFound().build();
+			return ResponseEntity.status(404).build(); //.notFound().build();
 		}
 		repo.save(object);
 		return ResponseEntity.status(HttpStatus.OK).build(); //.ok().build();
