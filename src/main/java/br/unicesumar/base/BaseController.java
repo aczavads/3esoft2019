@@ -55,9 +55,9 @@ public abstract class BaseController<ENTITY extends BaseEntity, REPOSITORY exten
 	@PutMapping("/{id}")
 	public ResponseEntity<String> put(@PathVariable String id, @RequestBody ENTITY object) {
 		if (!Objects.equals(id, object.getId())) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Requisição inválida! Verifique os IDs da entidade!"); //badRequest().build();
+			return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Requisiï¿½ï¿½o invï¿½lida! Verifique os IDs da entidade!"); //badRequest().build();
 		}
-		if (repo.findById(id).isEmpty()) {
+		if (!repo.findById(id).isPresent()) {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build(); //.notFound().build();
 		}
 		repo.save(object);
